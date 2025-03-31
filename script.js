@@ -72,7 +72,11 @@ function WinnersCheck () {
         return;
     }
 
-    currentPlayer = currentPlayer === "X" ? "O" : "X"; // Change de joueur
+    if (currentPlayer === "X") {
+        currentPlayer = "O";
+    } else {
+        currentPlayer = "X";
+    } // Change de joueur
     statusText.textContent = `It's ${currentPlayer}'s turn!`; // Met à jour le statut 
 }
 
